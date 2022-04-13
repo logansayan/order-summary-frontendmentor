@@ -32,6 +32,9 @@ body {
     background-color: var(--pale-blue);
     font-family: 'Red Hat Display';
     font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .main-container {
@@ -160,6 +163,13 @@ body {
 .cancel-btn:hover,
 .cancel-btn:active {
     color: var(--dark-blue);
+}
+
+.attribution {
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 @media all and (max-width: 500px) {
