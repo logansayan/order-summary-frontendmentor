@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+    --active-state: hsl(245deg 75% 52% / 70%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-background);
+}
+
+body {
+    background-image: url('./images/pattern-background-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: var(--pale-blue);
+    font-family: 'Red Hat Display';
+    font-size: 16px;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    max-width: 400px;
+    max-height: 100%;
+    border-radius: 7px;
+    margin: 25px;
+}
+
+.img-div {
+    margin-bottom: 40px;
+}
+
+.main-img {
+    max-width: 100%;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+.info-div {
+    margin: 0 auto;
+}
+
+.heading {
+    color: var(--dark-blue);
+    text-align: center;
+    font-weight: 900;
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+}
+
+.description {
+    margin: 0 40px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--desaturated-blue);
+}
+
+.plan {
+    display: flex;
+    background-color: var(--very-pale-blue);
+    padding: 20px;
+    width: 300px;
+    margin: 20px auto;
+    border-radius: 7px;
+}
+
+.music-icon {
+    justify-content: flex-start;
+    margin: 0;
+    margin-right: 15px;
+    width: 40px;
+}
+
+.plan-info {
+    margin-right: 40px;
+    font-size: 15px;
+}
+
+.plan-description {
+    font-size: 1rem;
+    font-weight: 900;
+    color: var(--dark-blue);
+}
+
+.price {
+    color: var(--desaturated-blue);
+}
+
+.change-btn,
+.proceed-btn,
+.cancel-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    font-family: 'Red Hat Display';
+    font-weight: 700;
+}
+
+.change-btn {
+    color: var(--bright-blue);
+    font-weight: 700;
+    text-decoration: underline;
+    margin-left: 20px;
+}
+
+.change-btn:hover,
+.change-btn:active {
+    text-decoration: none;
+    color: var(--active-state);
+}
+
+.buttons-div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.proceed-btn {
+    padding: 15px 85px;
+    background-color: var(--bright-blue);
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 5px 20px var(--desaturated-blue);
+    margin-bottom: 20px;
+}
+
+.proceed-btn:hover,
+.proceed-btn:active {
+    background-color: var(--active-state);
+    box-shadow: none;
+}
+
+.cancel-btn {
+    font-weight: 900;
+    color: var(--desaturated-blue);
+    margin-bottom: 40px;
+}
+
+.cancel-btn:hover,
+.cancel-btn:active {
+    color: var(--dark-blue);
+}
+
+@media all and (max-width: 500px) {
+    body {
+        background-image: url('./images/pattern-background-mobile.svg');
+    }
+}
+
+/* PHONE CONFIG */
+
+@media all and (max-width: 380px) {
+
+    .info-div {
+        margin: 25px;
+    }
+
+    .img-div {
+        margin-bottom: 0px;
+    }
+
+    .description {
+        margin: 20px;
+    }
+
+    .cancel-btn {
+        margin-bottom: 0;
+    }
+}
